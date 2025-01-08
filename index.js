@@ -80,7 +80,7 @@ async function main() {
         const { vermagic, pkgarch } = await getDetails(target, subtarget);
 
         //if (version !== 'SNAPSHOT' || (SNAPSHOT_SUBTARGETS_TO_BUILD.includes(subtarget) && SNAPSHOT_TARGETS_TO_BUILD.includes(target))) {
-        if (version !== 'SNAPSHOT' || (SNAPSHOT_SUBTARGETS_TO_BUILD.includes(subtarget) && SNAPSHOT_TARGETS_TO_BUILD.includes(target))) {
+        if (target=='mediatek' && subtarget=='filogic') {
           jobConfig.push({
             tag: version,
             target,
